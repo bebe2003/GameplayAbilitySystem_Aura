@@ -56,7 +56,7 @@ void AAuraEffectActor::BeginPlay()
 	// Sphere->OnComponentEndOverlap.AddDynamic(this, &AAuraEffectActor::EndOverLap);
 }
 
-void AAuraEffectActor::ApplyEffectToTarget(AActor* Target, TSubclassOf<UGameplayEffect> GameplayEffectClass)
+void AAuraEffectActor::ApplyEffectToTarget(AActor* TargetActor, TSubclassOf<UGameplayEffect> GameplayEffectClass)
 {
 	/* 
 	// IAbilitySystemInterface* ASCInterface = Cast<IAbilitySystemInterface>(Target);
@@ -66,7 +66,7 @@ void AAuraEffectActor::ApplyEffectToTarget(AActor* Target, TSubclassOf<UGameplay
 	// }
 	*/
 	
-	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(Target);
+	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
 	if(TargetASC == nullptr) return;
 
 	check(GameplayEffectClass);
