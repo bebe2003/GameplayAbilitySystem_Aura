@@ -19,7 +19,7 @@ public:
 	virtual void OnRep_PlayerState() override;
 protected:
 private:
-	void InitAbilityActorInfo();
+	virtual void InitAbilityActorInfo() override;
 	
 	
 };
