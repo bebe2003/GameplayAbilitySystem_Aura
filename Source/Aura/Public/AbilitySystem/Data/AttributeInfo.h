@@ -24,9 +24,7 @@ struct FAuraAttributeInfo
 	UPROPERTY(BlueprintReadOnly)
 	float AttributeValue = 0.f;
 };
-/**
- * 
- */
+
 UCLASS()
 class AURA_API UAttributeInfo : public UDataAsset
 {
