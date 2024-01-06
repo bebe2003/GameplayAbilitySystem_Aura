@@ -131,22 +131,20 @@ void AAuraPlayerController::AbilityInputTagPressed(FGameplayTag InputTag)
 		bTargeting = ThisActor ? true : false;
 		bAutoRunning = false;
 	}
-
-	
 }
 
 void AAuraPlayerController::AbilityInputTagReleased(FGameplayTag InputTag)
 {
 	if (!InputTag.MatchesTagExact(FAuraGameplayTags::Get().InputTag_RMB))
 	{
-		if (GetASC()) GetASC()->AbilityInputTagHeld(InputTag);
+		if (GetASC()) GetASC()->AbilityInputTagReleased(InputTag);
 		
 		return;
 	}
 
 	if (bTargeting)
 	{
-		if (GetASC()) GetASC()->AbilityInputTagHeld(InputTag);
+		if (GetASC()) GetASC()->AbilityInputTagReleased(InputTag);
 	}
 	else
 	{
