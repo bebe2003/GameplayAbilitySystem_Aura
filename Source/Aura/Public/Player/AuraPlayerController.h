@@ -56,7 +56,6 @@ private:
 	TObjectPtr<UAuraAbilitySystemComponent> AuraAbilitySystemComponent;
 
 	UAuraAbilitySystemComponent* GetASC();
-
 	
 	FVector CachedDestination = FVector::ZeroVector;
 	float FollowTime = 0.f;

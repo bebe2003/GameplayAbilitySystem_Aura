@@ -163,6 +163,7 @@ void AAuraPlayerController::AbilityInputTagReleased(FGameplayTag InputTag)
 				bAutoRunning = true;
 			}
 		}
+		
 		FollowTime = 0.f;
 		bTargeting = false;
 	}
